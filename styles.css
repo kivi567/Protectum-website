@@ -1,0 +1,410 @@
+/* Основные стили для страницы */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Общее правило для изображений */
+img {
+  max-width: 400px; /* Ограничивает максимальную ширину изображений */
+  height: auto; /* Сохраняет пропорции */
+  display: block; /* Избегает появления лишних пробелов вокруг изображений */
+}
+
+/* Стили для фиксированного заголовка */
+.header {
+  width: 100%;
+  position: fixed; /* Делаем заголовок фиксированным */
+  top: 0; /* Заголовок прижмется к верхней части экрана */
+  left: 0;
+  z-index: 1000; /* Чтобы заголовок был сверху других элементов */
+  background-color: #fff; /* Белый фон для заголовка, чтобы он не терял видимость */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для заголовка */
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+/* Логотип */
+.logo img {
+  height: 40px;
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.contact-btn {
+  margin-left: 20px;
+}
+
+/* Кнопка Заказать звонок */
+.contact-btn button {
+  background-color: #006400; /* Цвет фона */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-btn button:hover {
+  background-color: #006400; /* Цвет фона при наведении */
+}
+
+/* Черта */
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  margin-top: 10px;
+}
+
+/* Нижняя часть заголовка с кнопками */
+.bottom-header {
+  background-color: #f4f4f4;
+  padding: 10px 30px;
+  display: flex; /* Используем flexbox для выравнивания */
+  justify-content: center; /* Центрируем элементы по горизонтали */
+  align-items: center; /* Центрируем элементы по вертикали */
+  width: 100%;
+}
+
+/* Навигационный список */
+.bottom-header nav ul {
+  display: flex; /* Включаем flexbox для горизонтального расположения */
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Обеспечиваем, чтобы элементы списка занимали всю ширину */
+  justify-content: center; /* Центрируем элементы по горизонтали */
+  gap: 30px; /* Отступ между кнопками */
+}
+
+/* Пункты списка */
+.bottom-header nav ul li {
+  list-style: none; /* Убираем маркеры у списка */
+}
+
+/* Ссылки в списке */
+.bottom-header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  transition: color 0.3s;
+  display: inline-block; /* Блочное отображение для ссылок */
+}
+
+.bottom-header nav ul li a:hover {
+  color: #006400; /* Цвет при наведении */
+}
+
+/* Первая секция с названием и изображением */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 20px;
+  margin-top: 100px;
+}
+
+.text-left,
+.image-right {
+  width: 48%; /* Половина экрана */
+  min-width: 300px;
+}
+
+.text-left h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #333;
+}
+
+.image-right img {
+  width: 100%; /* Заполняет доступную ширину */
+  height: auto;
+  object-fit: contain; /* Для сохранения пропорций и квадратной формы */
+}
+
+/* Стили для статистических данных */
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 равные колонки */
+  gap: 30px; /* Отступ между колонками */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Стиль для каждого статистического блока */
+.stat-item {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item h2 {
+  font-size: 40px;
+  color: #006400; /* Цвет текста для числовых данных */
+  margin: 0;
+  font-weight: bold;
+}
+
+.stat-item p {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Эффект при наведении */
+.stat-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для секции Наши услуги */
+.services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  gap: 30px; /* Отступ между изображением и списком */
+}
+
+/* Изображение слева */
+.image-left {
+  width: 48%; /* Половина ширины */
+}
+
+.image-left img {
+  width: 100%; /* Заполняет доступную ширину */
+  height: auto;
+  object-fit: cover; /* Сохранение пропорций и квадратной формы */
+}
+
+/* Список услуг справа */
+.services-list {
+  width: 48%; /* Половина ширины */
+}
+
+.services-list h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.services-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-list li {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Эффект для списка услуг при наведении */
+.services-list li:hover {
+  color: #006400; /* Зеленый цвет при наведении */
+  cursor: pointer;
+}
+
+/* Секция Будущие возможности */
+.future-opportunities {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+/* Контент внутри секции */
+.future-opportunities-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Текст слева */
+.text-left {
+  width: 48%; /* Половина ширины */
+}
+
+.text-left h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.text-left p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Изображение справа */
+.image-right {
+  width: 48%; /* Половина ширины */
+}
+
+.image-right img {
+  width: 100%; /* Заполняет доступную ширину */
+  height: auto;
+  object-fit: cover; /* Сохранение пропорций */
+}
+
+/* Секция Примеры работ */
+.projects {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.projects h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Галерея картинок */
+.projects-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Два столбца */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.project-item img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* Сохранение пропорций изображения */
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.7); /* Затемненный фон для читаемости */
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.overlay p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.4;
+  word-wrap: break-word; /* Перенос длинных слов */
+}
+
+.project-item:hover .overlay {
+  opacity: 1; /* Показываем описание при наведении */
+}
+
+/*Стили для замыкающих элементов сайта*/
+.footer {
+  background-color: #f4f4f4;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-info p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 5px 0;
+}
+
+.contact-info .phone {
+  font-size: 24px;
+  color: #006400;
+}
+
+.small-text {
+  font-size: 14px;
+  color: #555;
+}
+
+.social-icons {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain; /* Сохранение пропорций без обрезки */
+}
+
+.footer-links {
+  margin: 10px 0;
+  font-size: 12px;
+  color: #777;
+}
+
+.footer-links a {
+  color: #777;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-logo {
+  margin: 15px 0;
+}
+
+.footer-logo img {
+  width: 60px;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+}
